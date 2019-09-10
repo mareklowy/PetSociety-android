@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Pet Society</string>
+
+    <string name="example_fragment_1">This is the first example fragment</string>
+    <string name="example_fragment_2">This is the %1$s example fragment</string>
+
 </resources>

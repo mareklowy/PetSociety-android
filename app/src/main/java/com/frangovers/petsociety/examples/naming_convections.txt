@@ -1,0 +1,46 @@
+File Naming:
+
+    -	Drawables:
+        •	Icon: ic_name_[type, color, etc.]
+                ic_home_white
+
+        •	Background: bg_name_[type, color, etc.]
+                bc_login
+                bc_main_dark
+
+        •	Foreground: fg_name_[type, color, etc.]
+                fg_businesscell_gradient_black
+
+        •	Drawable: dw_viewtype_name_[roundedcorners, color, etc.]
+                dw_button_submitorder_orange_rounded
+
+    -	Layouts:
+        •	Activity: activity_name
+                activity_main
+                activity_main
+
+        •	Fragment: fragment_name
+        •	Cell: cell_listname_<name – if more cell-types in a list>
+        •	Navigation:
+            -	tabbar_[name, type, etc.]
+            -	navbar_[name, type, etc.]
+            -	drawer_[name, type, etc.]
+
+Item Naming:
+    -	IDs:
+        •	All views have to have relevant ID
+        •	All lowercase
+        •	name_[type]_viewtype
+                login_button
+                question_title_textview
+                price_text_textview
+                cardnumber_textview
+                cardnumber_edittext
+
+    -	Adapters:
+        •	ListViewNameAdapter
+
+Determined at Project Beginning:
+    -	Styles
+    -	Style Names
+    -	Fragment Names
