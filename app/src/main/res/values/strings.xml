@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">Pet Society</string>
 
+    <!--    Facebook SDK Stuff-->
+    <string name="facebook_app_id">297554551112650</string>
+    <string name="fb_login_protocol_scheme">fb297554551112650</string>
+
+    <!--    Strings-->
+
     <string name="example_fragment_1">This is the first example fragment</string>
     <string name="example_fragment_2">This is the %1$s example fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
