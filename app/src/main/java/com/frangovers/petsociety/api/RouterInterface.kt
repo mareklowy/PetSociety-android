@@ -1,9 +1,11 @@
 package com.frangovers.petsociety.api
 
 import com.frangovers.petsociety.BuildConfig
+import com.frangovers.petsociety.api.data.Article
 import com.frangovers.petsociety.api.requests.ExampleRequest
 import com.frangovers.petsociety.api.requests.ExampleResponse
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,6 +20,7 @@ interface RouterInterface {
             OkHttpClient.Builder()
                 .readTimeout(5000, TimeUnit.MILLISECONDS)
                 .connectTimeout(5000, TimeUnit.MILLISECONDS)
+                .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
                 .build()
 
         fun create(): RouterInterface {
@@ -28,6 +31,10 @@ interface RouterInterface {
                 .build().create(RouterInterface::class.java)
         }
     }
+
+    @GET("articles/all")
+    fun getArticles(
+    ): Call<List<Article>>
 
     @Headers("Content-type: application/json")
     @POST("/path/{userId}")

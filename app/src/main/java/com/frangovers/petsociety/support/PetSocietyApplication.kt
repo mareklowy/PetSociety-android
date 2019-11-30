@@ -2,7 +2,6 @@ package com.frangovers.petsociety.support
 
 import android.app.Application
 import android.content.Context
-import com.facebook.FacebookSdk
 import io.realm.Realm
 import io.realm.RealmConfiguration
 
@@ -27,7 +26,7 @@ class PetSocietyApplication : Application() {
         Realm.setDefaultConfiguration(config)
 
         //Initialize Fscebook SDK
-        FacebookSdk.sdkInitialize(applicationContext)
+        //FacebookSdk.sdkInitialize(applicationContext)
     }
 
     companion object {
