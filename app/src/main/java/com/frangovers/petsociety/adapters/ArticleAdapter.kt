@@ -1,6 +1,7 @@
 package com.frangovers.petsociety.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,10 +38,14 @@ class ArticleAdapter(
         fun bind(article: Article) {
             view?.apply {
                 article_cell_title_textview.text = article.title
-                article_cell_text_imageview.text = "Article text will appear here..."
-                Glide.with(context)
-                    .load("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
-                    .into(article_cell_image_imageview)
+                article_cell_text_imageview.text = article.description
+                article.coverImage?.also {
+                    Log.d("COVER", it)
+                    Glide.with(context)
+                        .load(it)
+                        .into(article_cell_image_imageview)
+                }
+
             }
         }
     }

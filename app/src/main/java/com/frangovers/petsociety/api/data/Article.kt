@@ -14,6 +14,12 @@ data class Article(
     @SerializedName("category")
     @Expose
     var category: String? = null,
+    @SerializedName("coverImage")
+    @Expose
+    var coverImage: String? = null,
+    @SerializedName("description")
+    @Expose
+    var description: String? = null,
     @SerializedName("data")
     @Expose
     var data: List<ArticleContent>? = null
