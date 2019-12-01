@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.frangovers.petsociety.R
 import com.frangovers.petsociety.api.data.Article
 import kotlinx.android.synthetic.main.cell_article.view.*
+import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class ArticleAdapter(
     private val context: Context?,
@@ -36,7 +37,7 @@ class ArticleAdapter(
     inner class ArticleViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(article: Article) {
-            view?.apply {
+            view.apply {
                 article_cell_title_textview.text = article.title
                 article_cell_text_imageview.text = article.description
                 article.coverImage?.also {
@@ -45,7 +46,9 @@ class ArticleAdapter(
                         .load(it)
                         .into(article_cell_image_imageview)
                 }
-
+                view.onClick {
+                    this@ArticleAdapter.onClick(article)
+                }
             }
         }
     }

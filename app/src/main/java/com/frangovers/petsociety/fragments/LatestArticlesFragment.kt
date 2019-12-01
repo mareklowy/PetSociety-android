@@ -1,4 +1,4 @@
-package com.frangovers.petsociety
+package com.frangovers.petsociety.fragments
 
 
 import android.os.Bundle
@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.frangovers.petsociety.R
 import com.frangovers.petsociety.adapters.ArticleAdapter
 import com.frangovers.petsociety.api.ApiResponseType
 import com.frangovers.petsociety.api.DataProvider
 import com.frangovers.petsociety.api.data.Article
+import com.frangovers.petsociety.helpers.ScreenManager
 import kotlinx.android.synthetic.main.fragment_latest_articles.*
 
 /**
@@ -40,22 +42,29 @@ class LatestArticlesFragment : Fragment() {
         latest_articles_articles_recyclerview.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = ArticleAdapter(context, articles ?: listOf()) {
-                //TODO: Open Article
+                openArticle(it)
             }
         }
     }
 
-    fun updateUI() {
+    private fun updateUI() {
         setupRecycler()
     }
 
-    fun getArticles(completion: () -> Unit) {
+    private fun getArticles(completion: () -> Unit) {
         DataProvider.getArticles { response, articles ->
             if (response.type == ApiResponseType.SUCCESS) {
                 this.articles = articles
             }
             completion()
         }
+    }
+
+    private fun openArticle(article: Article) {
+        val articleFragment = ArticleFragment().apply {
+            this.article = article
+        }
+        ScreenManager.replaceFrame(activity, articleFragment, true)
     }
 
 }

@@ -2,6 +2,7 @@ package com.frangovers.petsociety
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.frangovers.petsociety.fragments.LatestArticlesFragment
 import com.frangovers.petsociety.helpers.ScreenManager
 
 class MainActivity : AppCompatActivity() {
