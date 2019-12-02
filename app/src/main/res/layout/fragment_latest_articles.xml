@@ -22,6 +22,118 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <HorizontalScrollView
+            android:id="@+id/latest_articles_filter_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+
+            android:fadingEdgeLength="24dp"
+            android:requiresFadingEdge="horizontal"
+
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/latest_articles_title_textview">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/latest_articles_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Space
+                    android:id="@+id/latest_articles_filter_space"
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/latest_articles_filter_training_button"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/dw_articles_filter_button_rounded"
+
+                    android:text="Training"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_space"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/latest_articles_filter_care_button"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/dw_articles_filter_button_rounded"
+                    android:text="Care"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_training_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/latest_articles_filter_health_button"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/dw_articles_filter_button_rounded"
+                    android:text="Health"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_care_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/latest_articles_filter_breeds_button"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/dw_articles_filter_button_rounded"
+                    android:text="Breeds"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_health_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/latest_articles_filter_food_button"
+                    android:layout_width="75dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+
+                    android:background="@drawable/dw_articles_filter_button_rounded"
+                    android:text="Food"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_breeds_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Space
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toEndOf="@id/latest_articles_filter_food_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/latest_articles_articles_recyclerview"
             android:layout_width="match_parent"
@@ -32,7 +144,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latest_articles_title_textview" />
+            app:layout_constraintTop_toBottomOf="@id/latest_articles_filter_scrollview" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

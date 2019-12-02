@@ -34,7 +34,7 @@ object DataProvider {
             }
 
             override fun onFailure(call: Call<List<Article>>, t: Throwable) {
-                Log.d("submitShortAnswer", t.toString())
+                Log.d("getArticles", t.toString())
                 completion(ApiResponse(500), null)
             }
         })
