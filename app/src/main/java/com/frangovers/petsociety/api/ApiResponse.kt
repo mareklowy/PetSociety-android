@@ -7,7 +7,6 @@ enum class ApiResponseType {
 class ApiResponse(var code: Int) {
     var type: ApiResponseType = ApiResponseType.SUCCESS
     var message: String = ""
-    var subMessage: String? = null
 
     init {
         when (code) {

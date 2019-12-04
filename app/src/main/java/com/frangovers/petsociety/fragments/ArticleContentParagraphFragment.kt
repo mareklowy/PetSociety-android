@@ -9,9 +9,6 @@ import androidx.fragment.app.Fragment
 import com.frangovers.petsociety.R
 import kotlinx.android.synthetic.main.fragment_article_content_paragraph.view.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class ArticleContentParagraphFragment : Fragment() {
 
     var paragraphText = ""
