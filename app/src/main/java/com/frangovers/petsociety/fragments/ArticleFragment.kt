@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.frangovers.petsociety.MainActivity
 import com.frangovers.petsociety.R
 import com.frangovers.petsociety.api.data.Article
 import com.frangovers.petsociety.api.data.ArticleContent
@@ -28,6 +29,11 @@ class ArticleFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         updateUI()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun updateUI() {
