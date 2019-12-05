@@ -40,6 +40,11 @@ class LatestArticlesFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateCategoryButtonsBackgrouds()
+    }
+
     private fun setupRecycler() {
         latest_articles_articles_recyclerview.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -146,6 +151,54 @@ class LatestArticlesFragment : Fragment() {
             ArticleCategories.FOOD.selected = !ArticleCategories.FOOD.selected
             updateRecycler()
         }
+    }
+
+    private fun updateCategoryButtonsBackgrouds() {
+        latest_articles_filter_health_button.backgroundDrawable =
+            if (ArticleCategories.HEALTH.selected) ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_selected_rounded
+            )
+            else ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_rounded
+            )
+        latest_articles_filter_training_button.backgroundDrawable =
+            if (ArticleCategories.TRAINING.selected) ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_selected_rounded
+            )
+            else ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_rounded
+            )
+        latest_articles_filter_care_button.backgroundDrawable =
+            if (ArticleCategories.CARE.selected) ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_selected_rounded
+            )
+            else ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_rounded
+            )
+        latest_articles_filter_breeds_button.backgroundDrawable =
+            if (ArticleCategories.BREEDS.selected) ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_selected_rounded
+            )
+            else ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_rounded
+            )
+        latest_articles_filter_food_button.backgroundDrawable =
+            if (ArticleCategories.FOOD.selected) ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_selected_rounded
+            )
+            else ContextCompat.getDrawable(
+                activity!!,
+                R.drawable.dw_articles_filter_button_rounded
+            )
     }
 
     private fun buildArticles(): List<Article> {
