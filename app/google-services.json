@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "909851419989",
+    "firebase_url": "https://pet-society-frangovers.firebaseio.com",
+    "project_id": "pet-society-frangovers",
+    "storage_bucket": "pet-society-frangovers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909851419989:android:3b14e87abdb134bccbfbdc",
+        "android_client_info": {
+          "package_name": "com.frangovers.petsociety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909851419989-2u7kadj58sv7kuq3jq52bh910dhnn4mq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frangovers.petsociety",
+            "certificate_hash": "2c48a940450ecf00789daeae9339018058ef6bef"
+          }
+        },
+        {
+          "client_id": "909851419989-79qsf0jh8gv1hjtlimvoohqnukfgsi9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKaGU-04KOaGUmIuSObKSKNapOr0asz6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909851419989-79qsf0jh8gv1hjtlimvoohqnukfgsi9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

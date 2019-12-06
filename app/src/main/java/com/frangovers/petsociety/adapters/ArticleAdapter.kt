@@ -1,7 +1,6 @@
 package com.frangovers.petsociety.adapters
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,7 +40,6 @@ class ArticleAdapter(
                 article_cell_title_textview.text = article.title
                 article_cell_text_imageview.text = article.description
                 article.coverImage?.also {
-                    Log.d("COVER", it)
                     Glide.with(context)
                         .load(it)
                         .into(article_cell_image_imageview)

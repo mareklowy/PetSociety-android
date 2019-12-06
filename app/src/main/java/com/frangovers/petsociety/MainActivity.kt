@@ -25,3 +25,6 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 }
+
+//CRASH TEST
+//Crashlytics.getInstance().crash()

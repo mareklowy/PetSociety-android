@@ -10,11 +10,6 @@ class PetSocietyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        // Initialize Crashlytics
-        // Crashlytics should only be run in the production builds
-//        if (!BuildConfig.DEBUG) {
-//            Fabric.with(this, Crashlytics())
-//        }
 
         // Configure Realm - Delete Realm content if Migration is needed
         Realm.init(this)
