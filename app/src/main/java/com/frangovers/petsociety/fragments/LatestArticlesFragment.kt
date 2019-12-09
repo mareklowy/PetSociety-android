@@ -57,7 +57,7 @@ class LatestArticlesFragment : Fragment() {
     }
 
     private fun updateRecycler() {
-        latest_articles_articles_recyclerview.apply {
+        latest_articles_articles_recyclerview?.apply {
             (adapter as ArticleAdapter).articles = buildArticles()
             (adapter as ArticleAdapter).notifyDataSetChanged()
         }
